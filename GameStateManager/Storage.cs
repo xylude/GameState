@@ -1,5 +1,4 @@
 using System.IO;
-using GameState;
 using System.Runtime.Serialization.Formatters.Binary;
 
 namespace GameState {
@@ -12,7 +11,7 @@ namespace GameState {
             file.Close();
         }
 
-        public TStore Load(string path) {                        
+        public TStore Load(string path) {
             if(File.Exists(path)) {
                 BinaryFormatter bf = new BinaryFormatter();
                 FileStream file = File.Open(path, FileMode.Open);
